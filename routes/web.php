@@ -23,3 +23,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/contacts', [App\Http\Controllers\ContactsController::class, 'view']);
 Route::post('/contacts',[ContactsController::class, 'submit']);
+Route::get('/contacts/list',[ContactsController::class, 'list']);
+Route::get('/contacts/list/delete/{id}',[ContactsController::class, 'delete']);
+Route::get('/contacts/list/edit/{id}',[ContactsController::class, 'edit']);
+Route::post('/contacts/list/edit/{id}',[ContactsController::class, 'editContact']);
